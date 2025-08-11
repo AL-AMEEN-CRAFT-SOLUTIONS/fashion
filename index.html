@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chic & Co. | Modern Fashion</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Use a more elegant font combination -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fcf8f5; /* Soft off-white background */
+        }
+        .hero-bg {
+            /* Using a more vibrant image for the hero section */
+            background-image: url('7ee8f5aa-363e-44b1-90fd-d8a60c3edf24.jfif');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+        }
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .accent-color {
+            background-color: #a0522d; /* A rich, earthy brown for accents */
+        }
+        .accent-color-hover:hover {
+            background-color: #8b4513;
+        }
+        .text-accent {
+            color: #a0522d;
+        }
+        /* New styling for WhatsApp button */
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-gray-800 hero-title">Chic & Co.</a>
+            
+            <!-- Desktop Navigation and WhatsApp Button -->
+            <div class="hidden md:flex items-center space-x-10">
+                <nav class="space-x-10 text-gray-600 font-semibold text-lg">
+                    <a href="#" class="hover:text-gray-900 transition-colors duration-200 hover:text-accent">New Arrivals</a>
+                    <a href="#" class="hover:text-gray-900 transition-colors duration-200 hover:text-accent">Clothing</a>
+                    <a href="#" class="hover:text-gray-900 transition-colors duration-200 hover:text-accent">Bags & Accessories</a>
+                    <a href="#" class="hover:text-gray-900 transition-colors duration-200 hover:text-accent">Shoes</a>
+                    <a href="#" class="hover:text-gray-900 transition-colors duration-200 hover:text-accent">Contact</a>
+                </nav>
+                <a href="https://wa.me/2347068396069" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center space-x-4">
+                <a href="https://wa.me/2347068396069" target="_blank" class="text-2xl text-[#25D366] hover:text-[#128C7E]">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <button id="mobile-menu-btn" class="text-gray-600 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-4">
+            <a href="#" class="block px-6 py-2 text-gray-600 font-semibold hover:bg-gray-100 transition-colors duration-200">New Arrivals</a>
+            <a href="#" class="block px-6 py-2 text-gray-600 font-semibold hover:bg-gray-100 transition-colors duration-200">Clothing</a>
+            <a href="#" class="block px-6 py-2 text-gray-600 font-semibold hover:bg-gray-100 transition-colors duration-200">Bags & Accessories</a>
+            <a href="#" class="block px-6 py-2 text-gray-600 font-semibold hover:bg-gray-100 transition-colors duration-200">Shoes</a>
+            <a href="#" class="block px-6 py-2 text-gray-600 font-semibold hover:bg-gray-100 transition-colors duration-200">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-[70vh] md:h-[85vh] flex items-center justify-center text-center p-4">
+        <div class="bg-black/40 p-8 md:p-12 rounded-xl text-white">
+            <h1 class="hero-title text-4xl md:text-6xl font-bold mb-4 animate-fade-in">Embrace Your Elegance</h1>
+            <p class="text-base md:text-xl font-light mb-6 max-w-xl mx-auto animate-fade-in-delay">Curated collections of timeless fashion, meticulously crafted for you.</p>
+            <a href="#" class="inline-block accent-color text-white font-bold py-3 px-8 rounded-full shadow-lg accent-color-hover transition-colors duration-300">Shop The Collection</a>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="container mx-auto px-6 py-16">
+        <h2 class="hero-title text-4xl font-bold text-center text-gray-800 mb-12">Featured Essentials</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+            <!-- Product Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card">
+                <img src="2c6abfed-188b-4e05-aafb-00a535bdc907.jfif" alt="Stylish Mule Heels" class="w-full h-72 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Pinch Pleat Heels</h3>
+                    <p class="text-lg text-accent font-bold mb-4">$75.00</p>
+                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-full hover:bg-gray-300 transition-colors duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card">
+                <img src="2c800d70-86e9-42d7-aaee-1128b55ee023.jfif" alt="Platform Sandals" class="w-full h-72 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Trendy Platform Sandals</h3>
+                    <p class="text-lg text-accent font-bold mb-4">$55.00</p>
+                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-full hover:bg-gray-300 transition-colors duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card">
+                <img src="2fd3d954-5c5c-420f-98dd-a22cbed17a16.jfif" alt="Golden Rhinestone Sandals" class="w-full h-72 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Golden Rhinestone Slides</h3>
+                    <p class="text-lg text-accent font-bold mb-4">$85.00</p>
+                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-full hover:bg-gray-300 transition-colors duration-300">View Details</a>
+                </div>
+            </div>
+            
+            <!-- Product Card 4 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card">
+                <img src="03f1cc3c-0d8f-403f-a13d-b2162475df58.jfif" alt="Black Designer Slides" class="w-full h-72 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Designer Band Slides</h3>
+                    <p class="text-lg text-accent font-bold mb-4">$95.00</p>
+                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-full hover:bg-gray-300 transition-colors duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card">
+                <img src="5ce7d2b6-b358-4006-968b-6a3f40004a49.jfif" alt="Lace-up Sandals" class="w-full h-72 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Gladiator Sandals</h3>
+                    <p class="text-lg text-accent font-bold mb-4">$60.00</p>
+                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-full hover:bg-gray-300 transition-colors duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card">
+                <img src="7ee8f5aa-363e-44b1-90fd-d8a60c3edf24.jfif" alt="Assorted High Heels" class="w-full h-72 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Assorted High Heels</h3>
+                    <p class="text-lg text-accent font-bold mb-4">$80.00</p>
+                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-full hover:bg-gray-300 transition-colors duration-300">View Details</a>
+                </div>
+            </div>
+
+             <!-- Product Card 7 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card">
+                <img src="3ee1adb1-bf98-4483-9109-fd9c403cc5b5.jfif" alt="Golden Heels" class="w-full h-72 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Metallic Strap Heels</h3>
+                    <p class="text-lg text-accent font-bold mb-4">$70.00</p>
+                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-full hover:bg-gray-300 transition-colors duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Product Card 8 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden product-card">
+                <img src="5e53985f-0fd9-4de8-91e7-f1452ffd8107.jfif" alt="Assorted Mules" class="w-full h-72 object-cover">
+                <div class="p-6 text-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Earthy Tone Mules</h3>
+                    <p class="text-lg text-accent font-bold mb-4">$75.00</p>
+                    <a href="#" class="inline-block bg-gray-200 text-gray-800 font-semibold py-2 px-6 rounded-full hover:bg-gray-300 transition-colors duration-300">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter/Call-to-Action Section -->
+    <section class="accent-color text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="hero-title text-3xl font-bold mb-4">Stay in the Loop</h2>
+            <p class="text-lg mb-6 max-w-xl mx-auto font-light">Be the first to know about new arrivals and exclusive offers. Subscribe to our newsletter!</p>
+            <form class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <input type="email" placeholder="Enter your email" class="w-full sm:w-80 p-3 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-300">
+                <button type="submit" class="w-full sm:w-auto bg-gray-900 text-white font-bold py-3 px-8 rounded-full shadow-md hover:bg-gray-700 transition-colors duration-300">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-4 md:mb-0">
+                <p class="text-xl font-bold hero-title">Chic & Co.</p>
+                <p class="text-gray-400 font-light">© 2024 All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6 text-2xl">
+                <a href="https://wa.me/2347068396069" target="_blank" class="hover:text-gray-300"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-gray-300"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </footer>
+<script>
+    // Simple script for mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>
